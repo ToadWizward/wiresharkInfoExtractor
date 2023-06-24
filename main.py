@@ -93,16 +93,4 @@ if os.path.exists('temp.txt'):
     os.remove('temp.txt')
 espOverwriter()
 print('esp_sa overwritten')
-# if str(input('would you like to view the file?(y/n)')) == 'y':
-#     subprocess.Popen(["notepad", "esp_sa"])
-
-os.remove('temp.txt')
-
-# flag = False
-# while not flag:
-#     if str(input('this instance of esp_sa will be deleted on ending the program.\nPlease confirm you have copied and saved the file if you so wish.(y/n)')) == 'y':
-#         os.remove('esp_sa')
-#         flag = True
-
-
 
