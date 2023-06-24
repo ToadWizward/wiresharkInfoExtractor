@@ -62,9 +62,9 @@ def getUser():
 
 
 def espOverwriter():
-    file = open(wireSharkPath, 'w')
-    for _ in f:
-        f.write('')
+    file = open(wireSharkPath, 'r+')
+    for _ in file:
+        file.write(' ')
     file.close()
     file = open(wireSharkPath, 'a')
     g = open('esp_sa')
@@ -89,7 +89,8 @@ print(fullPath, ' is the chosen file.')
 f = open(str(fullPath), 'r')
 extractor()
 espWriter()
-os.remove('temp.txt')
+if os.path.exists('temp.txt'):
+    os.remove('temp.txt')
 espOverwriter()
 print('esp_sa overwritten')
 # if str(input('would you like to view the file?(y/n)')) == 'y':
